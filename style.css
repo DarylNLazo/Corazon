@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#111425,#3751e0);
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.moon{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    z-index:1000;
+}
+
+.moon:after
+{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background:linear-gradient(#111425,#3751e0);
+    background-attachment: fixed;
+}
+.forest
+{
+    position: absolute;
+    bottom: 0;
+    left: 65px;
+    width: -40%;
+    top: 390px;
+    z-index:1000;
+    transform: scale(1.2);
+}
+
+.scene i
+{
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%,90%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+       opacity: 0;
+       transform: translateY(-100px); 
+    }
+}
+
+.contenedor{
+   font-size: 33vw;
+   color:red;
+   animation: 3s ease infinite corazon;
+   text-shadow: 4px 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+.contenedor .contenido {
+    position: absolute;
+    left: 4%;
+    top: -30%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.contenedor .contenido h1{
+    position: absolute;
+   font-size: 50px;
+}
+
+.corazon {
+    width: 130px;
+    height: 130px;
+    background: red;
+    transform: rotate(45deg);
+    animation: palpitar 3s linear infinite alternate;
+    will-change: transform;
+}
+
+.corazon:before, .corazon:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.corazon:before{
+    top: 0;
+    left: -50%;
+}
+
+.corazon:after{
+    top: -50%;
+    left: 0;
+}
+
+@keyframes palpitar{
+    0%{
+        transform: rotate(45deg) scale(1);
+    }
+    50%{
+        transform: rotate(45deg) scale(1.5);
+    }
+    100%{
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+@keyframes corazon{
+
+    50%{
+        transform: scale(1.3);
+    }
+}

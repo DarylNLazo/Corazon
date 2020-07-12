@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TE Amo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="contenedor">
+    <div class="corazon"></div>
+       <div class="contenido">
+           <h1>Te Amo Erika</h1>
+       </div>
+</div>
+<div class="scene">
+<div class="moon"></div>
+    <img src="forest.png" class="forest">
+</div>
+<script type="text/javascript">
+    function start(){
+        let count = 500;
+        let scene = document.querySelector('.scene');
+        let i = 0;
+        while(i < count){
+            let star = document.createElement("i");
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * window.innerHeight);
+            let duration = Math.random() * 10;
+            let size = Math.random() * 2;
+
+            star.style.left = x+'px';
+            star.style.top = y+'px';
+            star.style.width = 1+size+'px';
+            star.style.height= 1+size+'px';
+
+            star.style.animationDuration = 5+duration+'s';
+            star.style.animationDelay = duration+'s';
+
+            scene.appendChild(star);
+            i++
+        }
+    }
+    start();
+</script>
+
+<script languaje="javascript">
+    var contra = "admin";
+ 
+    contra = prompt("pon tu contraseña para continuar")
+ 
+    if(contra == "admin")
+    {
+        alert("Bien");
+        document.write("");
+    
+        function redireccionando()
+        {
+            location.href=pagina
+        }
+        setTimeout ("redireccionar()", 0);
+    }
+    else{
+        alert("incorrecto");
+
+        function redireccionar()
+        {
+            location.href=pagina
+        }
+        setTimeout ("redirrecionar()",1);
+    }
+ </script>
+</body>
+</html>
